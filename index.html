@@ -26,7 +26,7 @@
       box-shadow: 0 2px 12px rgba(0,0,0,0.18);
     }
     .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .nav-logo img { height: 44px; width: auto; }
+    .nav-logo img { height: 62px; width: auto; }
     .nav-links { display: flex; gap: 28px; list-style: none; }
     .nav-links a {
       color: rgba(255,255,255,0.88); text-decoration: none;
@@ -106,7 +106,7 @@
     .quienes-text { flex: 1; }
     .quienes-visual { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .stat-card {
-      background: var(--blanco); border-radius: 14px; padding: 28px 20px;
+      background: var(--blanco); border-radius: 14px; padding: 38px 24px;
       text-align: center; box-shadow: 0 4px 20px rgba(0,54,179,0.08);
       border-top: 4px solid var(--azul); transition: transform 0.2s;
     }
@@ -114,9 +114,9 @@
     .stat-card:nth-child(3) { border-top-color: var(--verde); }
     .stat-card:nth-child(4) { border-top-color: var(--azul); }
     .stat-card:hover { transform: translateY(-4px); }
-    .stat-card .num { font-size: 1.6rem; font-weight: 700; color: var(--azul); }
+    .stat-card .num { font-size: 2.2rem; font-weight: 700; color: var(--azul); }
     .stat-card:nth-child(2) .num, .stat-card:nth-child(3) .num { color: var(--verde); }
-    .stat-card .lbl { font-size: 0.78rem; color: var(--gris-oscuro); margin-top: 6px; line-height: 1.3; }
+    .stat-card .lbl { font-size: 0.88rem; color: var(--gris-oscuro); margin-top: 8px; line-height: 1.4; }
     .valores-list { list-style: none; margin-top: 24px; display: flex; flex-direction: column; gap: 12px; }
     .valores-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 0.93rem; line-height: 1.5; }
     .valores-list li::before {
@@ -287,7 +287,7 @@
         <div class="hero-badge"><div class="num">+22</div><div class="label">Años en el mercado</div></div>
         <div class="hero-badge"><div class="num">100%</div><div class="label">Fabricación propia</div></div>
         <div class="hero-badge"><div class="num">+50</div><div class="label">Empresas atendidas</div></div>
-        <div class="hero-badge"><div class="num">Lima</div><div class="label">Callao y distribución</div></div>
+        <div class="hero-badge"><div class="num" style="font-size:1.3rem;">🚚</div><div class="label">Entregas en Lima y Callao</div></div>
       </div>
     </div>
   </div>
@@ -317,7 +317,7 @@
       <div class="stat-card"><div class="num">+50</div><div class="lbl">Empresas atendidas</div></div>
       <div class="stat-card"><div class="num">+20</div><div class="lbl">Años en el mercado</div></div>
       <div class="stat-card"><div class="num">Todas</div><div class="lbl">las medidas disponibles</div></div>
-      <div class="stat-card"><div class="num">💳</div><div class="lbl">Créditos accesibles para tu empresa</div></div>
+      <div class="stat-card"><div class="num">🚚</div><div class="lbl">Entregas en Lima y Callao</div></div>
     </div>
   </div>
 </section>
@@ -360,35 +360,7 @@
         </div>
       </div>
 
-      <div class="producto-card">
-        <div class="producto-img">📦</div>
-        <div class="producto-body">
-          <span class="producto-tag tag-verde">Baja Densidad</span>
-          <h3>Bolsas de empaque</h3>
-          <p>Para alimentos secos, productos ferreteros y más. Gran resistencia al rasgado y sellado hermético. Todas las medidas disponibles.</p>
-          <a href="https://wa.me/51965407676?text=Quiero%20cotizar%20bolsas%20de%20empaque" target="_blank" class="producto-cta">Cotizar →</a>
-        </div>
-      </div>
 
-      <div class="producto-card">
-        <div class="producto-img">🌱</div>
-        <div class="producto-body">
-          <span class="producto-tag">Alta Densidad</span>
-          <h3>Bolsas para vivero</h3>
-          <p>Negras, con drenaje y en todas las medidas. Especiales para plantas, semilleros y viveros agrícolas.</p>
-          <a href="https://wa.me/51965407676?text=Quiero%20cotizar%20bolsas%20para%20vivero" target="_blank" class="producto-cta">Cotizar →</a>
-        </div>
-      </div>
-
-      <div class="producto-card">
-        <div class="producto-img">⚙️</div>
-        <div class="producto-body">
-          <span class="producto-tag tag-naranja">A Medida</span>
-          <h3>Bolsas personalizadas</h3>
-          <p>Con tu logo, en tus medidas y colores. Fabricamos según tus especificaciones técnicas. Consulta sin compromiso.</p>
-          <a href="https://wa.me/51965407676?text=Quiero%20bolsas%20personalizadas" target="_blank" class="producto-cta">Consultar →</a>
-        </div>
-      </div>
 
     </div>
   </div>
@@ -434,32 +406,11 @@
             <td>Rollo x 100 und</td>
           </tr>
           <tr>
-            <td>Bolsa de empaque</td>
-            <td>40 × 60 cm</td>
-            <td>Baja Densidad</td>
-            <td><span class="precio-badge">S/ 8.00</span></td>
-            <td>Paquete x 25</td>
-          </tr>
-          <tr>
             <td>Bolsa polipropileno</td>
             <td>Todas las medidas</td>
             <td>Polipropileno</td>
             <td><span class="precio-badge">Consultar</span></td>
             <td>Por mayor</td>
-          </tr>
-          <tr>
-            <td>Bolsa para vivero</td>
-            <td>4 × 8 pulg.</td>
-            <td>Alta Densidad</td>
-            <td><span class="precio-badge">S/ 6.50</span></td>
-            <td>Fardo x 500</td>
-          </tr>
-          <tr>
-            <td>Bolsa personalizada</td>
-            <td>A medida</td>
-            <td>A elección</td>
-            <td><span class="precio-badge">Consultar</span></td>
-            <td>Pedido mínimo</td>
           </tr>
         </tbody>
       </table>
