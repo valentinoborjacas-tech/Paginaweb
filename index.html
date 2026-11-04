@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Casconi Plast – Bolsas de Polietileno por Mayor en Lima y Callao</title>
-  <meta name="description" content="Casconi Plast: fabricantes peruanos de bolsas de polietileno de alta y baja densidad y polipropileno. Más de 22 años de experiencia, venta por mayor y despacho en Lima y Callao."/>
+  <meta name="description" content="Casconi Plast: fabricantes peruanos de bolsas de polietileno de alta y baja densidad y polipropileno. Más de 22 años de experiencia, bolsas de 25 a 280 litros en todos los colores, cotización desde el millar y envío gratis en Lima y Callao."/>
   <meta name="theme-color" content="#0036B3"/>
   <meta property="og:title" content="Casconi Plast – Bolsas de Polietileno por Mayor"/>
   <meta property="og:description" content="Fabricación propia de bolsas para industria, comercio y hogar. Cotiza por WhatsApp."/>
@@ -256,21 +256,42 @@
     .paso h3 { font-size: 1.08rem; color: var(--azul); margin-bottom: 8px; font-weight: 600; }
     .paso p { font-size: 0.9rem; line-height: 1.65; max-width: 290px; margin: 0 auto; }
 
-    /* ===== PRECIOS ===== */
-    .tabla-wrap { overflow-x: auto; border-radius: var(--radio); box-shadow: var(--sombra); background: var(--blanco); }
-    table { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 640px; }
-    thead { background: var(--azul); color: var(--blanco); }
-    thead th { padding: 18px 22px; text-align: left; font-weight: 600; font-size: 0.78rem; letter-spacing: 1px; text-transform: uppercase; }
-    tbody tr { border-bottom: 1px solid #edf0f6; transition: background .15s; }
-    tbody tr:last-child { border-bottom: none; }
-    tbody tr:hover { background: #f5f8ff; }
-    tbody td { padding: 16px 22px; }
-    tbody td:first-child { font-weight: 600; color: var(--azul); }
-    .tipo-pill { display: inline-block; font-size: 0.75rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; background: #eef0f4; }
-    .precio-badge { display: inline-block; background: var(--verde); color: var(--blanco); font-weight: 700; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; white-space: nowrap; }
-    .precio-badge.consultar { background: var(--azul); }
-    .nota-precio { margin-top: 18px; font-size: 0.85rem; display: flex; align-items: center; gap: 10px; }
-    .nota-precio .icon { width: 18px; height: 18px; color: var(--azul); }
+    /* ===== CAPACIDADES Y PRESENTACIONES ===== */
+    .prod-detalles { display: grid; grid-template-columns: 1.15fr 1fr; gap: 22px; margin-top: 40px; }
+    .capacidad-card, .presentaciones-card { border-radius: 22px; padding: 34px 34px 36px; }
+    .capacidad-card { background: linear-gradient(135deg, var(--azul) 0%, var(--azul-oscuro) 100%); color: var(--blanco); position: relative; overflow: hidden; }
+    .capacidad-card::after { content: ''; position: absolute; width: 240px; height: 240px; border-radius: 50%; background: rgba(93,205,0,0.12); right: -70px; top: -90px; }
+    .capacidad-card .eyebrow { color: var(--verde); }
+    .capacidad-card h3 { font-size: clamp(1.5rem, 2.6vw, 2rem); font-weight: 700; line-height: 1.2; position: relative; }
+    .capacidad-card h3 span { color: var(--verde); }
+    .capacidad-card p { color: rgba(255,255,255,0.82); margin-top: 6px; }
+    .rango { margin: 26px 0 24px; }
+    .rango-barra { position: relative; height: 10px; border-radius: 10px; background: linear-gradient(90deg, rgba(93,205,0,0.45), var(--verde)); }
+    .rango-barra i { position: absolute; top: 50%; width: 18px; height: 18px; transform: translate(-50%, -50%); border-radius: 50%; background: var(--blanco); border: 3px solid var(--verde); }
+    .rango-barra i:nth-child(1) { width: 14px; height: 14px; transform: translate(0, -50%); }
+    .rango-barra i:nth-child(4) { width: 24px; height: 24px; transform: translate(-100%, -50%); }
+    .rango-labels { display: flex; justify-content: space-between; margin-top: 12px; font-size: 0.85rem; font-weight: 600; }
+    .colores { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .color { width: 26px; height: 26px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.55); box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
+    .color.transparente { background: repeating-conic-gradient(rgba(255,255,255,0.55) 0 25%, rgba(255,255,255,0.15) 0 50%) 50% / 10px 10px; }
+    .colores-mas { font-size: 0.82rem; color: rgba(255,255,255,0.8); margin-left: 4px; }
+    .presentaciones-card { background: var(--blanco); box-shadow: var(--sombra); }
+    .presentaciones-card h3 { font-size: 1.35rem; font-weight: 700; color: var(--azul); line-height: 1.25; margin-bottom: 24px; }
+    .presentaciones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .presentacion { text-align: center; border: 2px solid #e8ecf6; border-radius: 16px; padding: 20px 8px 18px; transition: border-color .2s, transform .2s; }
+    .presentacion:hover { border-color: var(--verde); transform: translateY(-3px); }
+    .pres-num { font-size: 1.9rem; font-weight: 800; color: var(--azul); line-height: 1; }
+    .presentacion:nth-child(2) .pres-num { color: var(--verde-oscuro); }
+    .pres-lbl { font-size: 0.8rem; margin-top: 10px; line-height: 1.3; font-weight: 500; }
+    .beneficios-row {
+      display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-top: 22px;
+      background: var(--blanco); border-radius: 22px; padding: 20px 24px; box-shadow: var(--sombra);
+    }
+    .beneficio { display: flex; align-items: center; gap: 14px; flex: 1; min-width: 230px; }
+    .beneficio strong { display: block; color: var(--azul); font-size: 1rem; }
+    .beneficio span { font-size: 0.85rem; }
+    .beneficio-icon { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; background: #e6edff; color: var(--azul); flex-shrink: 0; }
+    .beneficio-icon.verde { background: #eaf9dc; color: var(--verde-oscuro); }
 
     /* ===== FAQ ===== */
     .faq-inner { max-width: 820px; margin: 0 auto; }
@@ -406,6 +427,8 @@
       .hero-btns, .hero-stats { justify-content: center; }
       .hero-visual { max-width: 420px; margin: 0 auto; }
       .quienes-inner, .contacto-inner { grid-template-columns: 1fr; gap: 50px; }
+      .prod-detalles { grid-template-columns: 1fr; }
+      .beneficios-row .btn { width: 100%; justify-content: center; }
       .features-grid { grid-template-columns: 1fr 1fr; }
       .pasos { grid-template-columns: 1fr; gap: 36px; }
       .pasos::before { display: none; }
@@ -420,6 +443,8 @@
       .stat-card { padding: 22px 18px; }
       .form-row { grid-template-columns: 1fr; gap: 0; }
       .contact-form { padding: 28px 20px; }
+      .capacidad-card, .presentaciones-card { padding: 28px 22px; }
+      .pres-num { font-size: 1.6rem; }
       .footer-grid { grid-template-columns: 1fr; gap: 30px; }
       .hero-stats { gap: 22px; }
       .float-chip { display: none; }
@@ -471,7 +496,6 @@
   <ul class="nav-links" id="menu">
     <li><a href="#quienes">Nosotros</a></li>
     <li><a href="#productos">Productos</a></li>
-    <li><a href="#precios">Precios</a></li>
     <li><a href="#faq">Preguntas</a></li>
     <li><a href="#contacto">Contacto</a></li>
     <li><a href="https://wa.me/51965407676" target="_blank" rel="noopener" class="nav-cta"><svg class="icon"><use href="#i-wa"/></svg> WhatsApp</a></li>
@@ -484,7 +508,7 @@
     <div class="hero-text">
       <span class="hero-eyebrow"><span class="dot"></span> Fabricación nacional · Lima y Callao</span>
       <h1>Bolsas de polietileno <span>a la medida de tu negocio</span></h1>
-      <p class="hero-sub">Fabricamos bolsas de alta y baja densidad y de polipropileno para industria, comercio y hogar. Producción propia por mayor y despachos puntuales en Lima y Callao.</p>
+      <p class="hero-sub">Fabricamos bolsas de alta y baja densidad y de polipropileno para industria, comercio y hogar. Desde 25 hasta 280 litros, en todos los colores y micrajes, con envío gratis en Lima y Callao.</p>
       <div class="hero-btns">
         <a href="https://wa.me/51965407676?text=Hola,%20quisiera%20cotizar%20bolsas%20de%20polietileno" target="_blank" rel="noopener" class="btn btn-primary"><svg class="icon"><use href="#i-wa"/></svg> Cotizar ahora</a>
         <a href="#productos" class="btn btn-outline">Ver productos <svg class="icon"><use href="#i-arrow"/></svg></a>
@@ -531,7 +555,7 @@
         </g>
       </svg>
       <div class="float-chip chip-1"><span class="chip-icon"><svg class="icon"><use href="#i-shield"/></svg></span><div>Control de calidad<small>en cada lote</small></div></div>
-      <div class="float-chip chip-2"><span class="chip-icon"><svg class="icon"><use href="#i-truck"/></svg></span><div>Despacho puntual<small>Lima y Callao</small></div></div>
+      <div class="float-chip chip-2"><span class="chip-icon"><svg class="icon"><use href="#i-truck"/></svg></span><div>Envío gratis<small>Lima y Callao</small></div></div>
     </div>
   </div>
   <svg class="hero-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50 C 360 100 720 0 1080 40 C 1260 60 1380 60 1440 50 V90 H0 Z" fill="#f5f7fd"/></svg>
@@ -552,7 +576,7 @@
     <div class="stats-grid reveal reveal-d2">
       <div class="stat-card"><div class="stat-icon"><svg class="icon"><use href="#i-award"/></svg></div><div class="num">+22</div><div class="lbl">Años en el mercado</div></div>
       <div class="stat-card"><div class="stat-icon"><svg class="icon"><use href="#i-users"/></svg></div><div class="num">+50</div><div class="lbl">Empresas atendidas</div></div>
-      <div class="stat-card"><div class="stat-icon"><svg class="icon"><use href="#i-ruler"/></svg></div><div class="num">Todas</div><div class="lbl">las medidas disponibles</div></div>
+      <div class="stat-card"><div class="stat-icon"><svg class="icon"><use href="#i-ruler"/></svg></div><div class="num">25–280 L</div><div class="lbl">en todos los colores y micrajes</div></div>
       <div class="stat-card"><div class="stat-icon"><svg class="icon"><use href="#i-truck"/></svg></div><div class="num">Lima</div><div class="lbl">y Callao: entregas puntuales</div></div>
     </div>
   </div>
@@ -569,8 +593,8 @@
     <div class="features-grid">
       <div class="feature reveal"><div class="feature-icon"><svg class="icon"><use href="#i-factory"/></svg></div><h3>Producción propia</h3><p>Fabricamos en nuestra planta, con control de calidad en cada lote.</p></div>
       <div class="feature reveal reveal-d1"><div class="feature-icon"><svg class="icon"><use href="#i-chat"/></svg></div><h3>Asesoría sin costo</h3><p>Te ayudamos a elegir el calibre, la medida y el material ideal para tu uso.</p></div>
-      <div class="feature reveal reveal-d2"><div class="feature-icon"><svg class="icon"><use href="#i-truck"/></svg></div><h3>Despachos puntuales</h3><p>Entregamos tus pedidos a tiempo en todo Lima y Callao.</p></div>
-      <div class="feature reveal"><div class="feature-icon"><svg class="icon"><use href="#i-package"/></svg></div><h3>Amplio stock</h3><p>Stock permanente en las medidas más solicitadas, listo para despacho.</p></div>
+      <div class="feature reveal reveal-d2"><div class="feature-icon"><svg class="icon"><use href="#i-truck"/></svg></div><h3>Envío gratis</h3><p>No cobramos el envío. Entregamos tus pedidos a tiempo en Lima y Callao.</p></div>
+      <div class="feature reveal"><div class="feature-icon"><svg class="icon"><use href="#i-package"/></svg></div><h3>Presentaciones x10, x50 y x100</h3><p>Para emprendimientos, negocios y empresas grandes.</p></div>
       <div class="feature reveal reveal-d1"><div class="feature-icon"><svg class="icon"><use href="#i-scissors"/></svg></div><h3>Pedidos a medida</h3><p>Capacidad para pedidos especiales en las medidas que tu negocio necesita.</p></div>
       <div class="feature reveal reveal-d2"><div class="feature-icon"><svg class="icon"><use href="#i-leaf"/></svg></div><h3>Uso responsable</h3><p>Comprometidos con el uso responsable del plástico.</p></div>
     </div>
@@ -583,7 +607,7 @@
     <div class="section-head center reveal">
       <span class="eyebrow">Productos</span>
       <h2 class="section-title">Nuestros productos</h2>
-      <p class="section-sub">Bolsas para cada necesidad industrial, comercial y del hogar. Todos los productos disponibles por mayor.</p>
+      <p class="section-sub">Bolsas para cada necesidad industrial, comercial y del hogar. Cotizamos a partir del millar.</p>
     </div>
     <div class="productos-grid">
 
@@ -592,7 +616,7 @@
         <div class="producto-body">
           <span class="producto-tag tag-verde">Baja densidad</span>
           <h3>Bolsas para basura industrial</h3>
-          <p>Alta resistencia y gran capacidad de carga. Perfectas para industrias, restaurantes, hospitales y edificios. En todos los calibres y medidas.</p>
+          <p>Alta resistencia y gran capacidad de carga. Perfectas para industrias, restaurantes, hospitales y edificios. En todos los micrajes y medidas.</p>
           <a href="https://wa.me/51965407676?text=Quiero%20cotizar%20bolsas%20de%20basura%20industrial" target="_blank" rel="noopener" class="producto-cta">Cotizar <svg class="icon"><use href="#i-arrow"/></svg></a>
         </div>
       </article>
@@ -622,11 +646,56 @@
         <div class="producto-body">
           <span class="producto-tag tag-gris">Pedido especial</span>
           <h3>Bolsas a medida</h3>
-          <p>¿Necesitas una medida o calibre especial? Fabricamos pedidos a la medida de tu negocio. Cuéntanos qué necesitas y te asesoramos.</p>
+          <p>¿Necesitas una medida o micraje especial? Fabricamos pedidos a la medida de tu negocio. Cuéntanos qué necesitas y te asesoramos.</p>
           <a href="https://wa.me/51965407676?text=Quiero%20cotizar%20bolsas%20a%20medida" target="_blank" rel="noopener" class="producto-cta">Cotizar <svg class="icon"><use href="#i-arrow"/></svg></a>
         </div>
       </article>
 
+    </div>
+
+    <!-- Capacidades y presentaciones -->
+    <div class="prod-detalles">
+      <div class="capacidad-card reveal">
+        <span class="eyebrow">Capacidades</span>
+        <h3>Desde <span>25</span> hasta <span>280</span> litros</h3>
+        <p>Fabricamos en todos los colores y micrajes.</p>
+        <div class="rango" aria-hidden="true">
+          <div class="rango-barra"><i style="left:0%"></i><i style="left:33%"></i><i style="left:66%"></i><i style="left:100%"></i></div>
+          <div class="rango-labels"><span>25 L</span><span>280 L</span></div>
+        </div>
+        <div class="colores">
+          <span class="color" style="background:#1a1a1a" title="Negro"></span>
+          <span class="color" style="background:#0036B3" title="Azul"></span>
+          <span class="color" style="background:#5DCD00" title="Verde"></span>
+          <span class="color" style="background:#e03131" title="Rojo"></span>
+          <span class="color" style="background:#ffd43b" title="Amarillo"></span>
+          <span class="color" style="background:#ffffff" title="Blanco"></span>
+          <span class="color transparente" title="Transparente"></span>
+          <span class="colores-mas">y todos los colores</span>
+        </div>
+      </div>
+
+      <div class="presentaciones-card reveal reveal-d1">
+        <span class="eyebrow">Presentaciones</span>
+        <h3>Para cada tamaño de negocio</h3>
+        <div class="presentaciones">
+          <div class="presentacion"><div class="pres-num">x10</div><div class="pres-lbl">Emprendimientos</div></div>
+          <div class="presentacion"><div class="pres-num">x50</div><div class="pres-lbl">Negocios</div></div>
+          <div class="presentacion"><div class="pres-num">x100</div><div class="pres-lbl">Empresas grandes</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="beneficios-row reveal">
+      <div class="beneficio">
+        <span class="beneficio-icon"><svg class="icon"><use href="#i-package"/></svg></span>
+        <div><strong>Cotizamos a partir del millar</strong><span>Pedidos desde 1 000 bolsas</span></div>
+      </div>
+      <div class="beneficio">
+        <span class="beneficio-icon verde"><svg class="icon"><use href="#i-truck"/></svg></span>
+        <div><strong>Envío gratis</strong><span>No cobramos el envío</span></div>
+      </div>
+      <a href="https://wa.me/51965407676?text=Hola,%20quisiera%20cotizar%20bolsas" target="_blank" rel="noopener" class="btn btn-primary"><svg class="icon"><use href="#i-wa"/></svg> Cotizar ahora</a>
     </div>
   </div>
 </section>
@@ -659,46 +728,14 @@
     </div>
     <div class="pasos">
       <div class="paso reveal"><div class="paso-num"><svg class="icon"><use href="#i-chat"/></svg></div><h3>Escríbenos</h3><p>Cuéntanos por WhatsApp qué producto, medida y cantidad necesitas.</p></div>
-      <div class="paso reveal reveal-d1"><div class="paso-num"><svg class="icon"><use href="#i-check"/></svg></div><h3>Recibe tu cotización</h3><p>Te enviamos una cotización personalizada y sin compromiso.</p></div>
-      <div class="paso reveal reveal-d2"><div class="paso-num"><svg class="icon"><use href="#i-truck"/></svg></div><h3>Recibe tu pedido</h3><p>Confirmas y despachamos tu pedido en Lima o Callao.</p></div>
+      <div class="paso reveal reveal-d1"><div class="paso-num"><svg class="icon"><use href="#i-check"/></svg></div><h3>Recibe tu cotización</h3><p>Te enviamos una cotización personalizada y sin compromiso, a partir del millar.</p></div>
+      <div class="paso reveal reveal-d2"><div class="paso-num"><svg class="icon"><use href="#i-truck"/></svg></div><h3>Recibe tu pedido</h3><p>Confirmas y te lo llevamos sin costo de envío en Lima o Callao.</p></div>
     </div>
-  </div>
-</section>
-
-<!-- ===== PRECIOS ===== -->
-<section id="precios">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">Precios</span>
-      <h2 class="section-title">Tabla de precios referenciales</h2>
-      <p class="section-sub">Precios por mayor. Para pedidos especiales o grandes volúmenes, contáctanos y te enviamos una cotización personalizada.</p>
-    </div>
-    <div class="tabla-wrap reveal">
-      <table>
-        <thead>
-          <tr>
-            <th>Producto</th>
-            <th>Medida</th>
-            <th>Tipo</th>
-            <!-- REVISAR: antes decía "Precio por kg". Confirmar si el precio es por kg o por paquete/rollo. -->
-            <th>Precio</th>
-            <th>Presentación</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Bolsa para basura negra</td><td>70 × 100 cm</td><td><span class="tipo-pill">Baja densidad</span></td><td><span class="precio-badge">S/ 9.50</span></td><td>Paquete x 10</td></tr>
-          <tr><td>Bolsa para basura negra</td><td>90 × 120 cm</td><td><span class="tipo-pill">Baja densidad</span></td><td><span class="precio-badge">S/ 10.80</span></td><td>Paquete x 10</td></tr>
-          <tr><td>Bolsa supermercado / bodega</td><td>30 × 40 cm</td><td><span class="tipo-pill">Alta densidad</span></td><td><span class="precio-badge">S/ 7.20</span></td><td>Rollo x 100 und</td></tr>
-          <tr><td>Bolsa de polipropileno</td><td>Todas las medidas</td><td><span class="tipo-pill">Polipropileno</span></td><td><span class="precio-badge consultar">Consultar</span></td><td>Por mayor</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="nota-precio"><svg class="icon"><use href="#i-info"/></svg> Los precios no incluyen IGV y pueden variar según el volumen del pedido. Contáctanos para una cotización exacta.</p>
   </div>
 </section>
 
 <!-- ===== PREGUNTAS FRECUENTES ===== -->
-<section id="faq" class="bg-suave">
+<section id="faq">
   <div class="faq-inner">
     <div class="section-head center reveal">
       <span class="eyebrow">Preguntas frecuentes</span>
@@ -706,26 +743,24 @@
     </div>
     <div class="faq-list">
       <details class="faq-item reveal" open>
-        <summary>¿Venden por mayor y por menor? <svg class="icon"><use href="#i-chevron"/></svg></summary>
-        <p>Nos especializamos en la venta por mayor para negocios, empresas e industrias. Escríbenos con la cantidad que necesitas y te indicamos la mejor opción.</p>
+        <summary>¿Cuál es el pedido mínimo? <svg class="icon"><use href="#i-chevron"/></svg></summary>
+        <p>Cotizamos a partir del millar (1 000 bolsas). Escríbenos con el producto, la medida y la cantidad que necesitas, y te enviamos tu cotización.</p>
       </details>
       <details class="faq-item reveal">
-        <summary>¿Cuál es el pedido mínimo? <svg class="icon"><use href="#i-chevron"/></svg></summary>
-        <!-- REVISAR: si tienen un pedido mínimo definido, indicarlo aquí. -->
-        <p>Depende del producto y de la medida. Escríbenos por WhatsApp y te confirmamos el mínimo para tu pedido.</p>
+        <summary>¿Qué tamaños y colores tienen? <svg class="icon"><use href="#i-chevron"/></svg></summary>
+        <p>Fabricamos bolsas desde 25 hasta 280 litros, en todos los colores y micrajes.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>¿En qué presentaciones vienen? <svg class="icon"><use href="#i-chevron"/></svg></summary>
+        <p>En paquetes x10, x50 y x100, según lo que necesites: desde emprendimientos hasta negocios y empresas grandes.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>¿Cobran el envío? <svg class="icon"><use href="#i-chevron"/></svg></summary>
+        <p>No, el envío es gratis. Despachamos en Lima y Callao y coordinamos contigo la fecha y el lugar de entrega al confirmar tu pedido.</p>
       </details>
       <details class="faq-item reveal">
         <summary>¿Fabrican bolsas a medida? <svg class="icon"><use href="#i-chevron"/></svg></summary>
-        <p>Sí. Además de nuestro stock en las medidas más solicitadas, tenemos capacidad para fabricar pedidos especiales en la medida y el calibre que necesites.</p>
-      </details>
-      <details class="faq-item reveal">
-        <summary>¿Hacen despachos? <svg class="icon"><use href="#i-chevron"/></svg></summary>
-        <!-- REVISAR: agregar plazo de entrega habitual y si el despacho tiene costo. -->
-        <p>Sí, realizamos despachos en Lima y Callao. Coordinamos contigo la fecha y el lugar de entrega al confirmar tu pedido.</p>
-      </details>
-      <details class="faq-item reveal">
-        <summary>¿Los precios incluyen IGV? <svg class="icon"><use href="#i-chevron"/></svg></summary>
-        <p>No. Los precios publicados son referenciales, no incluyen IGV y pueden variar según el volumen del pedido.</p>
+        <p>Sí. Además de nuestro stock, tenemos capacidad para fabricar pedidos especiales en la medida y el micraje que necesites.</p>
       </details>
     </div>
   </div>
@@ -736,7 +771,7 @@
   <div class="cta-box reveal">
     <div>
       <h2>¿Necesitas bolsas por mayor?</h2>
-      <p>Cotiza hoy mismo por WhatsApp. Respuesta rápida y sin compromiso.</p>
+      <p>Cotizamos a partir del millar y el envío es gratis. Escríbenos por WhatsApp.</p>
     </div>
     <a href="https://wa.me/51965407676?text=Hola%20Casconi%20Plast,%20quisiera%20cotizar" target="_blank" rel="noopener" class="btn"><svg class="icon"><use href="#i-wa"/></svg> Cotizar por WhatsApp</a>
   </div>
@@ -815,7 +850,6 @@
       <ul>
         <li><a href="#quienes">Nosotros</a></li>
         <li><a href="#productos">Productos</a></li>
-        <li><a href="#precios">Precios</a></li>
         <li><a href="#faq">Preguntas frecuentes</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
